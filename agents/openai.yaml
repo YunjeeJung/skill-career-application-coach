@@ -1,0 +1,13 @@
+interface:
+  display_name: "Career Application Coach v1"
+  short_description: "Notion 경력 원본을 활용하는 맞춤형 취업 지원 코치"
+  default_prompt: "Use $career-application-coach to analyze this job posting and match my strongest verified experiences."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "notion"
+      description: "Read and update Experience Master and application tracking data in Notion"
+      transport: "streamable_http"
+      url: "https://mcp.notion.com/mcp"
+policy:
+  allow_implicit_invocation: true
